@@ -21,14 +21,9 @@ import urllib
 
 
 # Initializes your app with your bot token and socket mode handler
-app = App(token=os.environ["SLACK_BOT_TOKEN_CP"])  # use SLACK_BOT_TOKEN for beta.
+app = App(token=os.environ["SLACK_BOT_TOKEN_CP"]) 
 # constants
 EXAMPLE_COMMAND = "help"
-
-
-# Listens to incoming messages that contain "hello"
-# To learn available listener arguments,
-# visit https://slack.dev/bolt-python/api-docs/slack_bolt/kwargs_injection/args.html
 
 
 @app.message("help")
@@ -102,12 +97,9 @@ def message_hello(message, say):
 
 #  Start your app
 if __name__ == "__main__":
-    SocketModeHandler(app, os.environ["SLACK_APP_TOKEN_CP"]).start()#).start()# use SLACK_APP_TOKEN for beta
+    SocketModeHandler(app, os.environ["SLACK_APP_TOKEN_CP"]).start()
 
-#Slack bot can use v1 to look up whether an account is disabled or not given the correct permissions: https://www.cradlepointecm.com/api/v1/accounts/?format=json
-#slack bot can use mana api to migrate customers. 
 
-#
 
 
     
